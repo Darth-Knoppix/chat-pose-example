@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+An example chat window using Pose from Popmotion for animations.
+
+Take a look at the [blog post on how to Animate your React App with Pose](https://blog.sethcorker.com/bring-your-react-app-to-life/)
+
 ## Available Scripts
 
 In the project directory, you can run:
