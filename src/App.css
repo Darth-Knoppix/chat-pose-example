@@ -1,33 +1,197 @@
-.App {
-  text-align: center;
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.pane {
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 1rem;
+  margin: 1px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chrome {
+  width: 24rem;
+  height: 48rem;
+  border: 1rem solid;
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .button {
+  background: none;
+  border: 0;
+  height: 2rem;
+  padding: 0.5rem 1rem;
+  width: 4rem;
+  transition: all 0.1s linear;
+}
+
+.header .button:focus {
+  outline: 0;
+  text-shadow: 0px 0px 8px rgb(135, 160, 255);
+}
+
+.header .button:hover {
+  color: #00417b;
+}
+
+.header .title {
+}
+
+.header .more {
+  font-weight: bold;
+}
+
+.header .back {
+  font-weight: bold;
+}
+
+.header .name {
+  font-size: 1.25em;
+  font-weight: 500;
+  color: #00417b;
+}
+
+.person-selector {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.person-selector .item {
+  display: block;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  transform-origin: 50% 50% !important; /* Prevent pose resetting transform origin */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.person {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  opacity: 0.8;
+}
+
+.person.active {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 2rem;
+  border: 2px solid #00417b;
+  opacity: 1;
+}
+
+.person .profile {
+  width: calc(100% - 0.25rem);
+  height: calc(100% - 0.25rem);
+  border-radius: 1.5rem;
+}
+
+.chat {
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.chat .container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.chat .container:first-child {
+  margin-top: 0rem;
+}
+
+.chat .sent {
+  justify-content: flex-end;
+}
+
+.chat .received {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.chat .message {
+  border-radius: 1rem;
+  padding: 0.5rem;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.chat .message .date {
+  font-size: 0.75em;
+  opacity: 0.3;
+  margin-left: 0.5rem;
+}
+
+.chat .date > .date {
+  margin-left: 0;
+  text-align: right;
+}
+
+.chat .sent .message {
+  background-color: #f4f6fe;
+  border: 1px solid #badfff;
+  color: #00417b;
+}
+
+.chat .received .message {
+  background-color: #fafafa;
+  border: 1px solid #ececec;
+  color: #151515;
+}
+
+.chat .person-container {
+  transform: scale(0.75);
+}
+
+.chat .person-container .person {
+  opacity: 1;
+}
+
+.composer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.5);
+}
+
+.composer .text {
+  width: 100%;
+  background: 0;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 0;
+  text-align: left;
+  border-bottom: 1px dashed transparent;
+  font-size: 1em;
+}
+
+.composer .text:focus {
+  outline: 0;
+  border-bottom: 1px dashed #00417b;
 }
